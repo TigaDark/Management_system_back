@@ -2,7 +2,7 @@ HELP.md
 target/
 .idea/
 .mvn/
-mvnw
+mvnwe
 mvnw.cmd
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**

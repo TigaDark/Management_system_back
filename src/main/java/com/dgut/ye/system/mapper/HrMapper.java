@@ -56,4 +56,12 @@ public interface HrMapper {
      * @return the int
      */
     int updateByPrimaryKey(Hr record);
+
+    /**
+     * Load user by username hr.
+     *
+     * @param name the name
+     * @return the hr
+     */
+    Hr loadUserByUsername(String name);
 }

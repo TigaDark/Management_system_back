@@ -22,7 +22,10 @@
     from hr
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    <select id="loadUserByUsername" resultType="com.dgut.ye.system.bean.Hr">
+      select * from hr where username=#{name}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from hr
     where id = #{id,jdbcType=INTEGER}
   </delete>
