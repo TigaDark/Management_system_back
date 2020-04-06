@@ -2,6 +2,8 @@ package com.dgut.ye.system.bean;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @author : DGUT.YE
  * @date : 2020/03/15
@@ -18,14 +20,20 @@ public class Menu {
 
     private String name;
 
-    private String iconcls;
+    private String iconCls;
 
-    private Boolean keepalive;
+    /**
+     *   meta 就是keepalive 和 requireAuth
+     * */
+    private Meta meta;
 
-    private Boolean requireauth;
-
-    private Integer parentid;
+    private Integer parentId;
 
     private Boolean enabled;
+
+    /**
+    *   子菜单
+     * */
+    private List<Menu> children;
 
 }

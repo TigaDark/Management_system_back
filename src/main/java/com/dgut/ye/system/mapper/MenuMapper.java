@@ -2,6 +2,8 @@ package com.dgut.ye.system.mapper;
 
 import com.dgut.ye.system.bean.Menu;
 
+import java.util.List;
+
 /**
  * The interface Menu mapper.
  *
@@ -56,4 +58,6 @@ public interface MenuMapper {
      * @return the int
      */
     int updateByPrimaryKey(Menu record);
+
+    List<Menu> getMenuByHrId(Integer id);
 }

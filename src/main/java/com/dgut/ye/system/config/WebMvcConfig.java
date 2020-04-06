@@ -10,6 +10,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")  //允许所有接口
                 .allowedOrigins("*")             // 所有请求来源
+                .allowCredentials(true)
                 .allowedMethods("*")             // 所有方法如 get post。。
                 .maxAge(1000);                   // 探测请求存在的时间 如PUT等请求
     }
