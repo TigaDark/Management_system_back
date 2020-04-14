@@ -36,4 +36,9 @@ public class Menu {
      * */
     private List<Menu> children;
 
+    /**
+     *  菜单所需要的什么权限 才能访问
+     */
+    private List<Role> roles;
+
 }

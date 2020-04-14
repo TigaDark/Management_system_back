@@ -2,10 +2,12 @@ package com.dgut.ye.system.service.menu;
 
 import com.dgut.ye.system.bean.Hr;
 import com.dgut.ye.system.bean.Menu;
+import com.dgut.ye.system.bean.Role;
 import com.dgut.ye.system.config.SecurityConfig;
 import com.dgut.ye.system.mapper.MenuMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import sun.plugin.liveconnect.SecurityContextHelper;
@@ -26,5 +28,10 @@ public class MenuService {
                 .getAuthentication()
                 .getPrincipal())
                 .getId());
+    }
+
+//    @Cacheable
+    public List<Menu> getAllMenuWithRoles(){
+        return menuMapper.getAllMenuWithRoles();
     }
 }

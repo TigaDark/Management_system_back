@@ -1,6 +1,9 @@
 package com.dgut.ye.system.mapper;
 
 import com.dgut.ye.system.bean.Hr;
+import com.dgut.ye.system.bean.Role;
+
+import java.util.List;
 
 /**
  * The interface Hr mapper.
@@ -64,4 +67,6 @@ public interface HrMapper {
      * @return the hr
      */
     Hr loadUserByUsername(String name);
+
+    List<Role> getHrRolesById(Integer id);
 }

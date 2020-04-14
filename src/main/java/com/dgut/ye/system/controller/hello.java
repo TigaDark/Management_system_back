@@ -16,4 +16,15 @@ public class hello {
     public String hello(){
         return "hello";
     }
+
+
+    @RequestMapping("/employee/basic/hello")
+    public String testMenuAuth1(){
+        return "basic/hello";
+    }
+
+    @RequestMapping("/employee/advanced/hello")
+    public String testMenuAuth2(){
+        return "advanced/hello";
+    }
 }

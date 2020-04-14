@@ -2,9 +2,12 @@ package com.dgut.ye.system.bean;
 
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * The type Hr.
@@ -34,9 +37,15 @@ public class Hr implements UserDetails {
 
     private String remark;
 
+    private List<Role> roles;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        List<SimpleGrantedAuthority> authorityList = new ArrayList<>(roles.size());
+        for (Role role : roles) {
+            authorityList.add(new SimpleGrantedAuthority(role.getName()));
+        }
+        return authorityList;
     }
 
     @Override

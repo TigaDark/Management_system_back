@@ -1,6 +1,7 @@
 package com.dgut.ye.system.mapper;
 
 import com.dgut.ye.system.bean.Menu;
+import com.dgut.ye.system.bean.Role;
 
 import java.util.List;
 
@@ -60,4 +61,6 @@ public interface MenuMapper {
     int updateByPrimaryKey(Menu record);
 
     List<Menu> getMenuByHrId(Integer id);
+
+    List<Menu> getAllMenuWithRoles();
 }
