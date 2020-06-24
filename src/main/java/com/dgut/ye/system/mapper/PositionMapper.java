@@ -1,6 +1,9 @@
 package com.dgut.ye.system.mapper;
 
 import com.dgut.ye.system.bean.Position;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * The interface Position mapper.
@@ -56,4 +59,8 @@ public interface PositionMapper {
      * @return the int
      */
     int updateByPrimaryKey(Position record);
+
+    List<Position> getAllPositons();
+
+    int delePositionByIds(@Param("ids") Integer[] ids);
 }

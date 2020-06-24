@@ -1,5 +1,6 @@
 package com.dgut.ye.system.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -13,7 +14,8 @@ public class Position {
 
     private String name;
 
-    private Date createdate;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Shanghai")
+    private Date createDate;
 
     private Boolean enabled;
 
